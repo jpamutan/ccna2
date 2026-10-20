@@ -228,6 +228,7 @@ telephony-service
    max-ephones 5
    max-dn 20
    ip source-address 10.82.100.8 port 2000
+   create cnf-files
 ephone-dn 1
   number 8211
 ephone-dn 2
@@ -245,16 +246,16 @@ ephone-dn 7
 ephone-dn 8
   number 8288
  ephone-dn 9
-   number 8217
+   number 8299
 ephone-dn 10
- number 8218
+ number 8298
 Ephone 1
-  Mac-address 6cfa.8972.f0a9 
+  Mac-address 6cfa.8972.f0a9
   type 8945
   button 1:8 2:7 3:6 4:5
   restart
 Ephone 2
-  Mac-address 8478.aced.5bb7 
+  Mac-address 8478.aced.5bb7
   type 8945
   button 1:4 2:3 3:2 4:1
   restart  
