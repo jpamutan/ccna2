@@ -406,7 +406,7 @@ end
 @CoreBABA:
 config t
 router ospf 1
-router -id 10.82.82.4
+router-id 10.82.82.4
 network 10.82.0.0  0.0.255.255 area 0
 int gi 0/1
  ip ospf network point-to-point
