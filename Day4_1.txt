@@ -1,0 +1,29 @@
+Create an access-list named FWP5 to open the following ports:  
+www.bet100.com open only telnet, sql, domain, ftp, ping  
+
+!@UTM-PH
+conf t
+ no ip access-list extended FWP5
+ ip access-list extended FWP5
+  permit tcp Any host www.bet100.com eq 23 log
+  permit tcp Any host www.bet100.com eq 3306 log
+  permit icmp Any host www.bet100.com log
+  permit tcp Any host www.bet100.com eq 21 log	
+  permit tcp Any host www.bet100.com eq 53 log
+ Int gi 1
+  ip access-group FWP4 in
+  end
+
+
+!@UTM-PH
+conf t
+ no ip access-list extended FWP4
+ ip access-list extended FWP4
+ permit tcp Any host www.bet100.com eq 80 log
+ permit tcp Any host www.bet100.com eq 443 log
+ permit icmp Any host www.bet100.com log
+ permit tcp Any host www.bet100.com eq 22 log
+ permit tcp Any host www.bet100.com eq 53 log
+ Int gi 1
+  ip access-group FWP4 in
+  end
